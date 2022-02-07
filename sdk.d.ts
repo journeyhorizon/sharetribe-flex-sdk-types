@@ -52,7 +52,7 @@ type SdkResponse<T extends IEntity | IEntity[] = IEntity> = {
 };
 
 type CurrentUserQueryParams = {
-  expand: boolean;
+  expand?: boolean;
   include?: Array<CurrentUserRelationships>;
   "fields.image"?: Array<ImageVariants>;
 };
@@ -81,7 +81,7 @@ export type Sdk = {
   };
   currentUser: {
     show: (
-      params?: CurrentUserQueryParams
+      params?: Omit<CurrentUserQueryParams, "expand">
     ) => Promise<SdkResponse<ICurrentUser>>;
     create: (
       params: {
