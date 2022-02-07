@@ -28,6 +28,11 @@ export interface IEntity<T extends string = string> {
   id: UUID;
   type: EntityType;
   attributes: Record<string, unknown>;
+  relationships: {
+    [key: string]: {
+      data: { id: UUID; type: string } | Array<{ id: UUID; type: string }>;
+    };
+  };
 }
 
 /**

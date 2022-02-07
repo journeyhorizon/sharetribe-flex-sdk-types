@@ -1,11 +1,13 @@
 /// <reference path="entities.d.ts" />
 /// <reference path="types.d.ts" />
 /// <reference path="sdk.d.ts" />
+/// <reference path="tokenStore.d.ts" />
 
 import { Sdk } from "./sdk";
 import {
   browserCookieStore,
   expressCookieStore,
+  ITokenStore,
   memoryStore,
 } from "./tokenStore";
 import { transit, TypeHandler } from "./transit";
@@ -30,5 +32,6 @@ declare namespace SharetribeFlexSdk {
     baseUrl?: string;
     transitVerbose?: boolean;
     typeHandlers: Array<TypeHandler>;
+    tokenStore?: ITokenStore;
   }): Sdk;
 }

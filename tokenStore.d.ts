@@ -3,8 +3,8 @@ import * as express from "express";
 
 export interface ITokenStore {
   getToken(): any;
-  setToken(): void;
-  removeToken(): void;
+  setToken(data: any): void | Promise<void>;
+  removeToken(): void | Promise<void>;
 }
 
 export function browserCookieStore(params: {
