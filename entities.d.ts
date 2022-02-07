@@ -1,8 +1,32 @@
 import { LatLng, Money, UUID } from "./types";
 type ExtendedData = Record<string, unknown>;
+export type EntityType =
+  | "user"
+  | "listing"
+  | "image"
+  | "marketplace"
+  | "stripeAccount"
+  | "stripePaymentMethod"
+  | "stripeCustomer"
+  | "currentUser"
+  | "stripeAccountLink"
+  | "stripePerson"
+  | "stripeSetupIntent"
+  | "stock"
+  | "ownListing"
+  | "availabilityException"
+  | "booking"
+  | "stockReservation"
+  | "review"
+  | "message"
+  | "transaction"
+  | "processTransition"
+  | "timeSlot"
+  | "stockAdjustment"
+  | unknown;
 export interface IEntity<T extends string = string> {
   id: UUID;
-  type: T;
+  type: EntityType;
   attributes: Record<string, unknown>;
 }
 
