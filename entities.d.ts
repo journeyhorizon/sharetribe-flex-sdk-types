@@ -294,11 +294,11 @@ export interface IOwnListing<
     publicData: TPublicData;
     privateData: TPrivateData;
     metadata: TMetaData;
-    currentStock: IStock | null;
-    images: IImage[] | null;
-    author: ICurrentUser;
-    marketplace: IMarketplace;
   };
+  currentStock: IStock | null;
+  images: IImage[] | null;
+  author: ICurrentUser;
+  marketplace: IMarketplace;
 }
 
 export type AvailabilityExceptionRelationships = "ownListing";

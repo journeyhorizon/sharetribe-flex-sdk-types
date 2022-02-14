@@ -43,7 +43,7 @@ type SdkResponse<T extends IEntity | IEntity[] = IEntity> = {
     meta: T extends IEntity[]
       ? {
           page: number;
-          perPage: number;
+          perPage?: number;
           totalItems: number;
           totalPages: number;
         }
@@ -299,7 +299,7 @@ export type Sdk = {
       "fields.listing"?: Array<keyof IListing["attributes"]>;
       "fields.user"?: Array<keyof ICurrentUser["attributes"]>;
       page?: number;
-      perPage: number;
+      perPage?: number;
     }) => Promise<SdkResponse<IOwnListing[]>>;
     create: (
       params: {
@@ -530,7 +530,7 @@ export type Sdk = {
       start: Date;
       end: Date;
       page?: number;
-      perPage: number;
+      perPage?: number;
       include?: Array<BookingRelationships>;
       "fields.image"?: Array<ImageVariants>;
     }) => Promise<SdkResponse<IBooking[]>>;
@@ -698,7 +698,7 @@ export type Sdk = {
     query: (params: {
       transactionId: UUID;
       page?: number;
-      perPage: number;
+      perPage?: number;
       include?: Array<MessageRelationships>;
       "fields.user": Array<keyof IUser["attributes"]>;
       "fields.image": Array<ImageVariants>;
