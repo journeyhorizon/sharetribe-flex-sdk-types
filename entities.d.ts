@@ -54,7 +54,7 @@ export interface IEntity<T extends string = string> {
  * | facebook         | crop         | 1200px              | 630px        |
  * | twitter          | crop         | 600px               | 314px        |
  */
-type PredefinedImageVariants =
+export type PredefinedImageVariants =
   | "default"
   | "landscape-crop"
   | "landscape-crop2x"
