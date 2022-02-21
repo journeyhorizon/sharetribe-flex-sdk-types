@@ -89,6 +89,7 @@ export type Sdk = {
         firstName: string;
         lastName: string;
         displayName?: string;
+        password: string;
         bio?: string;
         publicData?: Record<string, unknown>;
         protectedData?: Record<string, unknown>;
