@@ -195,7 +195,7 @@ export type Sdk = {
       }
     ) => Promise<SdkResponse<IStripeAccount>>;
   };
-  stripeAccountLink: {
+  stripeAccountLinks: {
     create: (
       params: {
         failureURL: string;
