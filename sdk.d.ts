@@ -507,7 +507,7 @@ export type Sdk = {
     ) => Promise<SdkResponse<IAvailabilityException>>;
     delete: (
       params: {
-        listingId: UUID;
+        id: UUID;
       },
       queryParams?: {
         expand: boolean;
