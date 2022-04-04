@@ -118,7 +118,7 @@ export interface IUser<
     };
   };
   marketplace: IMarketplace;
-  image: IImage | null;
+  profileImage: IImage | null;
 }
 
 export interface IStripeAccount extends IEntity<"stripeAccount"> {
