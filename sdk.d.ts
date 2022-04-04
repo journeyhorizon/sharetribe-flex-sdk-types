@@ -385,7 +385,9 @@ export type Sdk = {
       }
     ) => Promise<SdkResponse<IOwnListing>>;
     update: (
-      params: Partial<{
+      params: {
+        id: UUID;
+      } & Partial<{
         title: string;
         description?: string;
         geolocation?: LatLng;
