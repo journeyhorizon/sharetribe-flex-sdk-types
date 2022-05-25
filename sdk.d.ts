@@ -276,7 +276,7 @@ export type Sdk = {
         minDuration: number;
         minStock: number;
         sort: string;
-        [key: `${"pub_" | "meta_"}${string}`]: string | number;
+        [key: `${"pub_" | "meta_"}${string}`]: string | number | string[];
         include?: Array<ListingRelationships>;
         "fields.image"?: Array<ImageVariants>;
         "fields.listing"?: Array<keyof IListing["attributes"]>;
