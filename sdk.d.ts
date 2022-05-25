@@ -264,7 +264,7 @@ export type Sdk = {
     query: (
       params?: Partial<{
         authorId: UUID;
-        ids: UUID[];
+        ids: UUID[] | string[];
         keywords: string;
         origin: LatLng;
         bounds: LatLngBounds;
@@ -281,6 +281,7 @@ export type Sdk = {
         "fields.image"?: Array<ImageVariants>;
         "fields.listing"?: Array<keyof IListing["attributes"]>;
         "fields.user"?: Array<keyof IUser["attributes"]>;
+        [key: `limit.${string}`]: number;
         page?: number;
         perPage?: number;
       }>
