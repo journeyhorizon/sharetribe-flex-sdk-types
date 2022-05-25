@@ -279,8 +279,8 @@ export type Sdk = {
         [key: `${"pub_" | "meta_"}${string}`]: string | number | string[];
         include?: Array<ListingRelationships>;
         "fields.image"?: Array<ImageVariants>;
-        "fields.listing"?: Array<keyof IListing["attributes"]>;
-        "fields.user"?: Array<keyof IUser["attributes"]>;
+        "fields.listing"?: Array<string>;
+        "fields.user"?: Array<string>;
         [key: `limit.${string}`]: number;
         page?: number;
         perPage?: number;
