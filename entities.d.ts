@@ -377,7 +377,7 @@ export type TransactionRelationships =
   | "provider"
   | "provider.profileImage"
   | "customer"
-  | "customer.providerImage"
+  | "customer.profileImage"
   | "booking"
   | "stockReservation"
   | "reviews"
