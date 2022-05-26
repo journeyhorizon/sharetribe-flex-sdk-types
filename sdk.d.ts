@@ -548,6 +548,7 @@ export type Sdk = {
       "fields.booking"?: Array<keyof IBooking["attributes"]>;
       "fields.review"?: Array<keyof IReview["attributes"]>;
       "fields.message"?: Array<keyof IMessage["attributes"]>;
+      "fields.image"?: Array<ImageVariants>;
     }) => Promise<SdkResponse<ITransaction>>;
     query: (params?: {
       only?: "sale" | "order";
@@ -704,8 +705,8 @@ export type Sdk = {
       page?: number;
       perPage?: number;
       include?: Array<MessageRelationships>;
-      "fields.user": Array<keyof IUser["attributes"]>;
-      "fields.image": Array<ImageVariants>;
+      "fields.user"?: Array<keyof IUser["attributes"]>;
+      "fields.image"?: Array<ImageVariants>;
     }) => Promise<SdkResponse<IMessage[]>>;
     send: (
       params: {
@@ -715,8 +716,8 @@ export type Sdk = {
       queryParams?: {
         expand: boolean;
         include?: Array<MessageRelationships>;
-        "fields.user": Array<keyof IUser["attributes"]>;
-        "fields.image": Array<ImageVariants>;
+        "fields.user"?: Array<keyof IUser["attributes"]>;
+        "fields.image"?: Array<ImageVariants>;
       }
     ) => Promise<SdkResponse<IMessage>>;
   };
