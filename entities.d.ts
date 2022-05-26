@@ -428,6 +428,10 @@ export interface ITransaction<
     reviews: IReview[];
     messages: IMessage[];
   };
+  customer: IUser;
+  provider: IUser;
+  listing: IListing;
+  booking: IBooking;
 }
 
 export interface IProcessTransition extends IEntity<"processTransition"> {
