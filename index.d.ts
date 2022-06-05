@@ -33,5 +33,6 @@ declare namespace SharetribeFlexSdk {
     transitVerbose?: boolean;
     typeHandlers: Array<TypeHandler>;
     tokenStore?: ITokenStore;
+    secure?: boolean;
   }): Sdk;
 }
