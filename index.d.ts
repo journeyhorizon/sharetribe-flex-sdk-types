@@ -1,38 +1,21 @@
-/// <reference path="entities.d.ts" />
-/// <reference path="types.d.ts" />
-/// <reference path="sdk.d.ts" />
-/// <reference path="tokenStore.d.ts" />
+/// <reference path='Types.d.ts' />
+/// <reference path='lib.d.ts' />
+/// <reference path='Sdk.d.ts' />
+/// <reference path='TokenStore.d.ts' />
+/// <reference path='Entities.d.ts' />
+/// <reference path='Auth.d.ts' />
 
-import { Sdk } from "./sdk";
-import {
-  browserCookieStore,
-  expressCookieStore,
-  ITokenStore,
-  memoryStore,
-} from "./tokenStore";
-import { transit, TypeHandler } from "./transit";
-import { types } from "./types";
-import { objectQueryString } from "./utils";
+declare module "sharetribe-flex-sdk" {
+  export namespace SharetribeFlexSdk {}
 
-export = SharetribeFlexSdk;
-declare namespace SharetribeFlexSdk {
-  const types: types;
-  const tokenStore: {
-    browserCookieStore: typeof browserCookieStore;
-    expressCookieStore: typeof expressCookieStore;
-    memoryStore: typeof memoryStore;
+  export const types: typeof SharetribeFlexSdk.Types;
+  export const tokenStore: {
+    memoryStore: typeof SharetribeFlexSdk.TokenStore.CreateTokenStore<SharetribeFlexSdk.TokenStore.CreateMemoryTokenStoreParams>;
+    browserCookieStore: typeof SharetribeFlexSdk.TokenStore.CreateTokenStore<SharetribeFlexSdk.TokenStore.CreateBrowserCookieStoreParams>;
+    expressCookieStore: typeof SharetribeFlexSdk.TokenStore.CreateTokenStore<SharetribeFlexSdk.TokenStore.CreateExpressCookieStoreParams>;
   };
-  const transit: transit;
-  const util: {
-    objectQueryString: typeof objectQueryString;
-  };
-  function createInstance(config: {
-    clientId: string;
-    clientSecret?: string;
-    baseUrl?: string;
-    transitVerbose?: boolean;
-    typeHandlers: Array<TypeHandler>;
-    tokenStore?: ITokenStore;
-    secure?: boolean;
-  }): Sdk;
+
+  export function createInstance(
+    config: SharetribeFlexSdk.SharetribeSdkConfig
+  ): SharetribeFlexSdk.SharetribeSdk;
 }
