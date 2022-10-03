@@ -6,7 +6,10 @@ declare module "sharetribe-flex-sdk" {
       users: SharetribeFlexSdk.Users;
       images: SharetribeFlexSdk.Images;
       currentUser: SharetribeFlexSdk.CurrentUser;
-      authInfo: typeof SharetribeFlexSdk.Auth.authInfo;
+      authInfo: SharetribeFlexSdk.Auth.authInfo;
+      login: SharetribeFlexSdk.Auth.login;
+      loginWithIdp: SharetribeFlexSdk.Auth.loginWithIdp;
+      logout: SharetribeFlexSdk.Auth.logout;
     }
   }
 }
