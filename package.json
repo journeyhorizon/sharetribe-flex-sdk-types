@@ -10,6 +10,7 @@
   "license": "MIT",
   "types": "index.d.ts",
   "version": "1.0.0",
-  "name": "sharetribe-flex-sdk-types",
-  "type": "module"
+  "name": "@types/sharetribe-flex-sdk",
+  "type": "module",
+  "typings": "*.d.ts"
 }

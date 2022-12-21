@@ -3,6 +3,7 @@ declare module "sharetribe-flex-sdk" {
     namespace Types {
       class UUID {
         _sdkType: "UUID";
+        uuid: string;
         /**
          *  Creates an instance of UUID.
          * @param {string} uuid - UUID represented as string
@@ -28,6 +29,8 @@ declare module "sharetribe-flex-sdk" {
       */
       class Money {
         _sdkType: "Money";
+        amount: number;
+        currency: string;
         /**
          *  Creates an instance of Money.
          * @param {number} amount
@@ -38,6 +41,8 @@ declare module "sharetribe-flex-sdk" {
       }
       class LatLng {
         _sdkType: "LatLng";
+        lat: number;
+        lng: number;
         /**
          *  Creates an instance of LatLng.
          * @param {number} lat
@@ -48,6 +53,8 @@ declare module "sharetribe-flex-sdk" {
       }
       class LatLngBounds {
         _sdkType: "LatLngBounds";
+        ne: LatLng;
+        sw: LatLng;
         /**
          *  Creates an instance of LatLngBounds.
          * @param {LatLng} ne
@@ -64,6 +71,7 @@ declare module "sharetribe-flex-sdk" {
       */
       class BigDecimal {
         _sdkType: "BigDecimal";
+        value: number;
         /**
          *  Creates an instance of BigDecimal.
          * @param {number} value

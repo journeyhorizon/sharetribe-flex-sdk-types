@@ -1,6 +1,6 @@
 declare module "sharetribe-flex-sdk" {
   namespace SharetribeFlexSdk {
-    interface StripePaymentMethodAttributes {
+    export interface StripePaymentMethodAttributes {
       type: "stripe-payment-method/card";
       stripePaymentMethodId: string;
       card: {
@@ -10,9 +10,12 @@ declare module "sharetribe-flex-sdk" {
         expirationMonth: number;
       };
     }
-    export interface NormalizedStripePaymentMethod
-      extends NormalizeEntity<"stripePaymentMethod"> {}
+
     export interface StripePaymentMethod
-      extends Entity<"stripePaymentMethod"> {}
+      extends ResourceObject<
+        "stripePaymentMethod",
+        StripePaymentMethodAttributes,
+        {}
+      > {}
   }
 }
