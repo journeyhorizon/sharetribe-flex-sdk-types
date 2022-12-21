@@ -29,7 +29,7 @@ declare module "sharetribe-flex-sdk" {
     export interface Image
       extends SharetribeFlexSdk.ResourceObject<"image", ImageAttributes, {}> {}
 
-    export class Image {
+    export class images {
       upload(): Promise<any>;
     }
   }
