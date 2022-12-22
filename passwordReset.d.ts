@@ -17,7 +17,7 @@ declare module "sharetribe-flex-sdk" {
           type: "passwordReset";
         }>
       >;
-      reset(): Promise<
+      reset(params: ResetPasswordParams): Promise<
         SingleResourceDoc<{
           id: Types.UUID;
           type: "passwordReset";
