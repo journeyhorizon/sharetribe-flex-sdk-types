@@ -34,7 +34,12 @@ declare module "sharetribe-flex-sdk" {
     clientId: string;
     clientSecret?: string;
     baseUrl?: string;
-    typeHandlers?: [];
+    typeHandlers?: Array<{
+      sdkType: unknown;
+      customType: unknown;
+      writer: (v: unknown) => unknown;
+      reader: (v: unknown) => unknown;
+    }>;
     version?: string;
     httpAgent?: import("http").Agent;
     httpsAgent?: import("https").Agent;
