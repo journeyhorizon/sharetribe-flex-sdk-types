@@ -34,16 +34,12 @@ declare module "sharetribe-flex-sdk" {
     clientId: string;
     clientSecret?: string;
     baseUrl?: string;
-    typeHandlers?: Array<{
-      sdkType: unknown;
-      customType: unknown;
-      writer: (v: unknown) => unknown;
-      reader: (v: unknown) => unknown;
-    }>;
+    typeHandlers?: Array<SharetribeFlexSdk.TypeHandler>;
     version?: string;
     httpAgent?: import("http").Agent;
     httpsAgent?: import("https").Agent;
     transitVerbose?: boolean;
+    tokenStore?: SharetribeFlexSdk.TokenStore.TokenStore;
   }
   export namespace SharetribeFlexSdk {}
   export function createInstance(

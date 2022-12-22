@@ -2,6 +2,8 @@ declare module "sharetribe-flex-sdk" {
   namespace SharetribeFlexSdk {
     export class Sdk {
       authInfo: SharetribeFlexSdk.authInfo;
+      login: SharetribeFlexSdk.login;
+      logout: SharetribeFlexSdk.logout;
       availabilityExceptions: SharetribeFlexSdk.availabilityExceptions;
       bookings: SharetribeFlexSdk.bookings;
       currentUser: SharetribeFlexSdk.currentUser;
