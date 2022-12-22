@@ -26,6 +26,8 @@
 /// <reference path='./transactions.d.ts' />
 /// <reference path='./types.d.ts' />
 /// <reference path='./user.d.ts' />
+/// <reference path='./serializer.d.ts' />
+/// <reference path='./utils.d.ts' />
 
 declare module "sharetribe-flex-sdk" {
   export interface CreateInstanceParams {
@@ -43,4 +45,6 @@ declare module "sharetribe-flex-sdk" {
     params: CreateInstanceParams
   ): SharetribeFlexSdk.Sdk;
   export const types: typeof SharetribeFlexSdk.Types;
+  export const transit: SharetribeFlexSdk.transit;
+  export const util: SharetribeFlexSdk.util;
 }
