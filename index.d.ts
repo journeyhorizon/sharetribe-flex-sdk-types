@@ -40,6 +40,7 @@ declare module "sharetribe-flex-sdk" {
     httpsAgent?: import("https").Agent;
     transitVerbose?: boolean;
     tokenStore?: SharetribeFlexSdk.TokenStore.TokenStore;
+    secure?: boolean;
   }
   export namespace SharetribeFlexSdk {}
   export function createInstance(
@@ -48,4 +49,9 @@ declare module "sharetribe-flex-sdk" {
   export const types: typeof SharetribeFlexSdk.Types;
   export const transit: SharetribeFlexSdk.transit;
   export const util: SharetribeFlexSdk.util;
+  export const tokenStore: {
+    memoryStore: typeof SharetribeFlexSdk.TokenStore.CreateTokenStore<SharetribeFlexSdk.TokenStore.CreateMemoryTokenStoreParams>;
+    browserCookieStore: typeof SharetribeFlexSdk.TokenStore.CreateTokenStore<SharetribeFlexSdk.TokenStore.CreateBrowserCookieStoreParams>;
+    expressCookieStore: typeof SharetribeFlexSdk.TokenStore.CreateTokenStore<SharetribeFlexSdk.TokenStore.CreateBrowserCookieStoreParams>;
+  };
 }
