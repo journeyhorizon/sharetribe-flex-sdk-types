@@ -52,6 +52,6 @@ declare module "sharetribe-flex-sdk" {
   export const tokenStore: {
     memoryStore: typeof SharetribeFlexSdk.TokenStore.CreateTokenStore<SharetribeFlexSdk.TokenStore.CreateMemoryTokenStoreParams>;
     browserCookieStore: typeof SharetribeFlexSdk.TokenStore.CreateTokenStore<SharetribeFlexSdk.TokenStore.CreateBrowserCookieStoreParams>;
-    expressCookieStore: typeof SharetribeFlexSdk.TokenStore.CreateTokenStore<SharetribeFlexSdk.TokenStore.CreateBrowserCookieStoreParams>;
+    expressCookieStore: typeof SharetribeFlexSdk.TokenStore.CreateTokenStore<SharetribeFlexSdk.TokenStore.CreateExpressCookieStoreParams>;
   };
 }
