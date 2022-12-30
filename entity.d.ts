@@ -12,8 +12,24 @@ declare module "sharetribe-flex-sdk" {
       id: SharetribeFlexSdk.Types.UUID;
       type: T;
       attributes: AttributesObject<A>;
-      relationships?: RelationshipsObject<R>;
+      relationships: RelationshipsObject<R>;
     }
+
+    type DenormalisedRelationship<
+      R extends RelationshipsObject = RelationshipsObject
+    > = {
+      [P in keyof R]?: R[P] extends RelationshipWithSingleData
+        ? ResourceObject<R[P]["data"]["type"]>
+        : R[P] extends RelationshipWithMultipleData
+        ? ResourceObject<R[P]["data"][number]["type"]>
+        : unknown;
+    };
+
+    export type DenormalisedResourceObject<R extends ResourceObject> = Omit<
+      R,
+      "relationships"
+    > &
+      DenormalisedRelationship<R["relationships"]>;
 
     export type RelationshipsObject<
       ATTRS extends { [k: string]: RelationshipsWithData } = {
