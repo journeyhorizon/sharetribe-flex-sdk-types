@@ -268,6 +268,7 @@ declare module "sharetribe-flex-sdk" {
         params: VerifyEmailParams,
         queryParams?: VerifyEmailQueryParams
       ): Promise<SingleResourceDoc<CurrentUser>>;
+      sendVerificationEmail(): Promise<void>;
     }
   }
 }
