@@ -13,7 +13,8 @@ declare module "sharetribe-flex-sdk" {
       | "square-small"
       | "square-small2x"
       | "facebook"
-      | "twitter";
+      | "twitter"
+      | (string & {});
 
     export interface ImageAttributes {
       variants: Record<
