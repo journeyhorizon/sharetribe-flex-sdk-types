@@ -10,11 +10,15 @@ declare module "sharetribe-flex-sdk" {
       username: string;
       password: string;
     }) => Promise<{
-      access_token: string;
-      expires_in: number;
-      refresh_token: string;
-      scope: "user";
-      token_type: "bearer";
+      status: number;
+      statusText: string;
+      data: {
+        access_token: string;
+        expires_in: number;
+        refresh_token: string;
+        scope: "user";
+        token_type: "bearer";
+      };
     }>;
   }
 }
