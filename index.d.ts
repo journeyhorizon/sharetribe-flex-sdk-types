@@ -1,4 +1,4 @@
-/// <reference path='auth.d.ts' />
+/// <reference path='./auth.d.ts' />
 /// <reference path='./availabilityExceptions.d.ts' />
 /// <reference path='./bookings.d.ts' />
 /// <reference path='./currentUser.d.ts' />
@@ -42,7 +42,10 @@ declare module "sharetribe-flex-sdk" {
     tokenStore?: SharetribeFlexSdk.TokenStore.TokenStore;
     secure?: boolean;
   }
-  export namespace SharetribeFlexSdk {}
+  export namespace SharetribeFlexSdk {
+    type DateLike = Date | string | number;
+    type ID = Types.UUID | string;
+  }
   export function createInstance(
     params: CreateInstanceParams
   ): SharetribeFlexSdk.Sdk;

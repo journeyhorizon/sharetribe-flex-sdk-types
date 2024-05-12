@@ -1,12 +1,19 @@
 declare module "sharetribe-flex-sdk" {
   namespace SharetribeFlexSdk {
+    type BookingState =
+      | "pending"
+      | "proposed"
+      | "accepted"
+      | "declined"
+      | "cancelled";
+
     export interface BookingAttributes {
       seats: number;
-      start: Date | number;
-      end: Date | number;
-      displayStart: Date | number;
-      displayEnd: Date | number;
-      state: "pending" | "proposed" | "accepted" | "declined" | "cancelled";
+      start: DateLike;
+      end: DateLike;
+      displayStart: DateLike;
+      displayEnd: DateLike;
+      state: BookingState;
     }
     export type BookingRelationships = {
       transaction: {
@@ -37,8 +44,8 @@ declare module "sharetribe-flex-sdk" {
 
     export interface QueryBookingParams extends BookingBaseQueryParams {
       listingId: Types.UUID | string;
-      start: Date | number;
-      end: Date | number;
+      start: DateLike;
+      end: DateLike;
       state?: string | string[];
     }
 

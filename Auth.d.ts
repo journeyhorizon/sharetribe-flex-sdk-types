@@ -1,11 +1,14 @@
 declare module "sharetribe-flex-sdk" {
   namespace SharetribeFlexSdk {
-    export type authInfo = () => Promise<{
+    export type AuthInfo = {
       scopes?: string[];
       isAnonymous: boolean;
       grantType: "client_credentials" | "refresh_token";
-    }>;
+    };
+    export type authInfo = () => Promise<AuthInfo>;
+
     export type logout = () => Promise<void>;
+
     export type login = (params: {
       username: string;
       password: string;

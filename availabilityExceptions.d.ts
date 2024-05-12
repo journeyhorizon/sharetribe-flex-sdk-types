@@ -1,9 +1,10 @@
 declare module "sharetribe-flex-sdk" {
   namespace SharetribeFlexSdk {
+
     export interface AvailabilityExceptionAttributes {
       seats: number;
-      start: Date | number;
-      end: Date | number;
+      start: DateLike;
+      end: DateLike;
     }
 
     export type AvailabilityExceptionRelationships = {
@@ -25,19 +26,20 @@ declare module "sharetribe-flex-sdk" {
     export interface AvailabilityExceptionBaseQueryParams {
       include?: Array<"ownListing">;
       "fields.ownListing"?: string[];
+      "fields.availabilityException"?: string[];
     }
 
     export interface QueryAvailabilityExceptionParams
       extends AvailabilityExceptionBaseQueryParams {
       listingId: Types.UUID | string;
-      start: Date | number;
-      end: Date | number;
+      start: DateLike;
+      end: DateLike;
     }
 
     export interface CreateAvailabilityExceptionParams {
       listingId: Types.UUID | string;
-      start: Date | number;
-      end: Date | number;
+      start: DateLike;
+      end: DateLike;
       seats: number;
     }
 
