@@ -1,0 +1,39 @@
+declare module "sharetribe-flex-sdk" {
+  namespace SharetribeFlexSdk {
+    interface ResourceAttributesMap {
+      stripeAccountLink: StripeAccountLinkAttributes;
+    }
+    interface StripeAccountLinkAttributes {
+      url: string;
+      expiresAt: Date;
+    }
+
+    interface NormalizedStripeAccountLink
+      extends NormalizedResourceObject<
+        "stripeAccountLink",
+        StripeAccountLinkAttributes,
+        {}
+      > {}
+
+    export interface StripeAccountLink
+      extends DenormalizedResourceObject<NormalizedStripeAccountLink> {}
+
+    interface CreateStripeAccountLinkParams {
+      failureURL: string;
+      successURL: string;
+      type: string;
+      collect: string;
+    }
+
+    interface CreateStripeAccountLinkQueryParams {
+      expand?: boolean;
+    }
+
+    export class stripeAccountLinks {
+      create(
+        params: CreateStripeAccountLinkParams,
+        queryParams?: CreateStripeAccountLinkQueryParams
+      ): Promise<SingleResourceDoc<NormalizedStripeAccountLink>>;
+    }
+  }
+}

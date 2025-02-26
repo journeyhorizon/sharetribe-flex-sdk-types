@@ -1,1 +1,7 @@
-export declare function objectQueryString(object: Record<string, any>): string;
+declare module "sharetribe-flex-sdk" {
+  namespace SharetribeFlexSdk {
+    export class util {
+      objectQueryString(obj: Record<string, unknown>): string;
+    }
+  }
+}
