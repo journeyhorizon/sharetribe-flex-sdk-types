@@ -21,6 +21,12 @@ declare module "sharetribe-flex-sdk" {
       };
     }>;
 
+    export type loginAs = (params: {
+      code: string;
+      redirect_uri: string;
+      code_verifier: string;
+    }) => Promise<void>;
+
     export type login = (params: {
       username: string;
       password: string;

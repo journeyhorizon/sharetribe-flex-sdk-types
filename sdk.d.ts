@@ -10,6 +10,7 @@ declare module "sharetribe-flex-sdk" {
       assetByAlias: SharetribeFlexSdk.assetByAlias;
       assetsByAlias: SharetribeFlexSdk.assetsByAlias;
       assetsByVersion: SharetribeFlexSdk.assetsByVersion;
+      loginAs: SharetribeFlexSdk.loginAs;
       availabilityExceptions: SharetribeFlexSdk.availabilityExceptions;
       bookings: SharetribeFlexSdk.bookings;
       currentUser: SharetribeFlexSdk.currentUser;
