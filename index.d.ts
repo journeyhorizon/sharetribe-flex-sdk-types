@@ -7,6 +7,7 @@
 /// <reference path='./entity.d.ts' />
 /// <reference path='./image.d.ts' />
 /// <reference path='./listings.d.ts' />
+/// <reference path='./marketplace.d.ts' />
 /// <reference path='./messages.d.ts' />
 /// <reference path='./ownListings.d.ts' />
 /// <reference path='./passwordReset.d.ts' />
