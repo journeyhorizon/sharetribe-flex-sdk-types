@@ -9,6 +9,18 @@ declare module "sharetribe-flex-sdk" {
 
     export type logout = () => Promise<void>;
 
+    export type exchangeToken = () => Promise<{
+      status: number;
+      statusText: string;
+      data: {
+        access_token: string;
+        expires_in: number;
+        refresh_token: string;
+        scope: "trusted:user";
+        token_type: "bearer";
+      };
+    }>;
+
     export type login = (params: {
       username: string;
       password: string;

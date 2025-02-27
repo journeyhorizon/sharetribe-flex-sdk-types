@@ -24,6 +24,7 @@ declare module "sharetribe-flex-sdk" {
       | "stockReservation"
       | "review"
       | "message"
+      | "permissionSet"
       | (string & {});
 
     type AttributesObject<

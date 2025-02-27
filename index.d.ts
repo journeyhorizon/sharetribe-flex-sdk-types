@@ -9,9 +9,11 @@
 /// <reference path='./messages.d.ts' />
 /// <reference path='./ownListings.d.ts' />
 /// <reference path='./passwordReset.d.ts' />
+/// <reference path='./permissionSet.d.ts' />
 /// <reference path='./processTransitions.d.ts' />
 /// <reference path='./reviews.d.ts' />
 /// <reference path='./sdk.d.ts' />
+/// <reference path='./serializer.d.ts' />
 /// <reference path='./stock.d.ts' />
 /// <reference path='./stockAdjustments.d.ts' />
 /// <reference path='./stockReservations.d.ts' />
@@ -26,7 +28,6 @@
 /// <reference path='./transactions.d.ts' />
 /// <reference path='./types.d.ts' />
 /// <reference path='./user.d.ts' />
-/// <reference path='./serializer.d.ts' />
 /// <reference path='./utils.d.ts' />
 
 declare module "sharetribe-flex-sdk" {
@@ -41,6 +42,8 @@ declare module "sharetribe-flex-sdk" {
     transitVerbose?: boolean;
     tokenStore?: SharetribeFlexSdk.TokenStore.TokenStore;
     secure?: boolean;
+    axios?: import("axios").AxiosInstance;
+    assetCdnBaseUrl?: string;
   }
   export namespace SharetribeFlexSdk {
     type ID = Types.UUID | string;

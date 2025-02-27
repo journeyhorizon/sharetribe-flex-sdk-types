@@ -63,6 +63,12 @@ declare module "sharetribe-flex-sdk" {
           type: "stripeCustomer";
         };
       };
+      effectivePermissionSet: {
+        data: {
+          id: Types.UUID;
+          type: "permissionSet";
+        };
+      };
     };
 
     interface CurrentUserBaseQueryParams {
@@ -72,6 +78,7 @@ declare module "sharetribe-flex-sdk" {
         | "stripeAccount"
         | "stripeCustomer"
         | "stripeCustomer.defaultPaymentMethod"
+        | "effectivePermissionSet"
       >;
       "fields.image"?: Array<`variants.${ImageVariants}`>;
       [key: `imageVariant.${string}`]: string;
@@ -93,8 +100,7 @@ declare module "sharetribe-flex-sdk" {
       currentPassword: string;
     }
 
-    interface DeleteCurrentUserQueryParams
-      extends CurrentUserBaseQueryParams {
+    interface DeleteCurrentUserQueryParams extends CurrentUserBaseQueryParams {
       expand?: boolean;
     }
 
@@ -128,8 +134,7 @@ declare module "sharetribe-flex-sdk" {
       privateData?: Partial<CurrentUserPrivateData>;
     }
 
-    interface CreateUserWithIDPQueryParams
-      extends CurrentUserBaseQueryParams {
+    interface CreateUserWithIDPQueryParams extends CurrentUserBaseQueryParams {
       expand?: boolean;
     }
 
@@ -144,8 +149,7 @@ declare module "sharetribe-flex-sdk" {
       profileImageId?: Types.UUID;
     }
 
-    interface UpdateProfileQueryParams
-      extends CurrentUserBaseQueryParams {
+    interface UpdateProfileQueryParams extends CurrentUserBaseQueryParams {
       expand?: boolean;
     }
 
@@ -154,8 +158,7 @@ declare module "sharetribe-flex-sdk" {
       newPassword: string;
     }
 
-    interface ChangePasswordQueryParams
-      extends CurrentUserBaseQueryParams {
+    interface ChangePasswordQueryParams extends CurrentUserBaseQueryParams {
       expand?: boolean;
     }
 

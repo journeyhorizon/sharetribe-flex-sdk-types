@@ -5,6 +5,11 @@ declare module "sharetribe-flex-sdk" {
       login: SharetribeFlexSdk.login;
       loginWithIdp: SharetribeFlexSdk.loginWithIdp;
       logout: SharetribeFlexSdk.logout;
+      exchangeToken: SharetribeFlexSdk.exchangeToken;
+      assetByVersion: SharetribeFlexSdk.assetByVersion;
+      assetByAlias: SharetribeFlexSdk.assetByAlias;
+      assetsByAlias: SharetribeFlexSdk.assetsByAlias;
+      assetsByVersion: SharetribeFlexSdk.assetsByVersion;
       availabilityExceptions: SharetribeFlexSdk.availabilityExceptions;
       bookings: SharetribeFlexSdk.bookings;
       currentUser: SharetribeFlexSdk.currentUser;

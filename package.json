@@ -1,6 +1,7 @@
 {
   "dependencies": {},
   "devDependencies": {
+    "@types/axios": "^0.14.4",
     "@types/express": "^4.17.14",
     "@types/node": "^18.7.23"
   },
