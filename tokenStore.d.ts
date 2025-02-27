@@ -10,7 +10,7 @@ declare module "sharetribe-flex-sdk" {
       }
       export interface CreateExpressCookieStoreParams {
         req: import("express").Request;
-        res: import("express").Response;
+        res?: import("express").Response;
         clientId: string;
         secure?: boolean;
       }
