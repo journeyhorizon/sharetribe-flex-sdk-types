@@ -1,11 +1,18 @@
 declare module "sharetribe-flex-sdk" {
   namespace SharetribeFlexSdk {
-    export type TypeHandler = {
-      sdkType: unknown;
-      customType: unknown;
-      writer: (v: unknown) => unknown;
-      reader: (v: unknown) => unknown;
-    };
+    export type TypeHandler =
+      | {
+          sdkType: unknown;
+          customType: unknown;
+          writer: (v: unknown) => unknown;
+          reader: (v: unknown) => unknown;
+        }
+      | {
+          type: unknown;
+          customType: unknown;
+          writer: (v: unknown) => unknown;
+          reader: (v: unknown) => unknown;
+        };
     export class transit {
       read(
         str: string,
