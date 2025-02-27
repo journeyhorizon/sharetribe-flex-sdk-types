@@ -30,6 +30,7 @@ declare module "sharetribe-flex-sdk" {
       users: SharetribeFlexSdk.Users;
       processTransitions: SharetribeFlexSdk.processTransitions;
       reviews: SharetribeFlexSdk.Reviews;
+      marketplace: SharetribeFlexSdk.marketplace;
     }
   }
 }

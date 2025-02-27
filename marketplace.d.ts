@@ -13,5 +13,11 @@ declare module "sharetribe-flex-sdk" {
 
     export interface Marketplace
       extends DenormalizedResourceObject<NormalizedMarketplace> {}
+
+    export class marketplace {
+      show(params?: {
+        "fields.marketplace"?: string[];
+      }): Promise<SingleResourceDoc<NormalizedMarketplace>>;
+    }
   }
 }
