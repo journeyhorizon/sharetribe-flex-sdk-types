@@ -4,8 +4,8 @@ declare module "sharetribe-flex-sdk" {
       type Token = Record<string, number | string>;
 
       export interface TokenStore {
-        getToken(): Token | Promise<Token>;
-        setToken(token: Token): void | Promise<void>;
+        getToken(): Token | Promise<Token> | null | Promise<null>;
+        setToken(token: Token | null): void | Promise<void>;
         removeToken(): void | Promise<void>;
       }
       export interface CreateExpressCookieStoreParams {
