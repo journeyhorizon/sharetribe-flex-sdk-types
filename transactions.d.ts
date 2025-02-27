@@ -23,7 +23,7 @@ declare module "sharetribe-flex-sdk" {
       unitPrice: Types.Money;
       lineTotal: Types.Money;
       reversal: boolean;
-      includedFor: Array<"customer" | "provider">;
+      includeFor: Array<"customer" | "provider">;
     } & LineItemCountValue<T>;
 
     export interface TransactionProtectedData extends Record<string, unknown> {}
@@ -132,7 +132,7 @@ declare module "sharetribe-flex-sdk" {
       "fields.image"?: Array<`variants.${ImageVariants}`>;
       "fields.user"?: string[];
       "fields.listing"?: string[];
-      [key: `imageVariant.${string}`]: string;
+      [key: `imageVariant.${string}`]: string | undefined;
     }
 
     interface ShowTransactionParams extends TransactionBaseQueryParams {
