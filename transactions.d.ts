@@ -14,8 +14,8 @@ declare module "sharetribe-flex-sdk" {
           percentage: T;
         }
       | {
-          seats: T;
-          units: T;
+          seats: number;
+          units: number;
         };
 
     export type LineItem<T = number> = {
