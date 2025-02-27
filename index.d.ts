@@ -1,3 +1,4 @@
+/// <reference path='./assets.d.ts' />
 /// <reference path='./auth.d.ts' />
 /// <reference path='./availabilityExceptions.d.ts' />
 /// <reference path='./bookings.d.ts' />
