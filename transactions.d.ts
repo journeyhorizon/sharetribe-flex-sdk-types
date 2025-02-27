@@ -6,25 +6,25 @@ declare module "sharetribe-flex-sdk" {
     interface RelationshipsObjectMap {
       transaction: TransactionRelationships;
     }
-    type LineItemCountValue =
+    type LineItemCountValue<T = number> =
       | {
-          quantity: number;
+          quantity: T;
         }
       | {
-          percentage: number;
+          percentage: T;
         }
       | {
-          seats: number;
-          units: number;
+          seats: T;
+          units: T;
         };
 
-    export type LineItem = {
+    export type LineItem<T = number> = {
       code: `line-item/${string}`;
       unitPrice: Types.Money;
       lineTotal: Types.Money;
       reversal: boolean;
       includedFor: Array<"customer" | "provider">;
-    } & LineItemCountValue;
+    } & LineItemCountValue<T>;
 
     export interface TransactionProtectedData extends Record<string, unknown> {}
     export interface TransactionMetadata extends Record<string, unknown> {}
