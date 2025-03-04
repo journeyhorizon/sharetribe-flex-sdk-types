@@ -16,6 +16,7 @@
 /// <reference path='./reviews.d.ts' />
 /// <reference path='./sdk.d.ts' />
 /// <reference path='./serializer.d.ts' />
+/// <reference path='./sitemapData.d.ts' />
 /// <reference path='./stock.d.ts' />
 /// <reference path='./stockAdjustments.d.ts' />
 /// <reference path='./stockReservations.d.ts' />
