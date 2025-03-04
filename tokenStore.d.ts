@@ -19,7 +19,7 @@ declare module "sharetribe-flex-sdk" {
         secure?: boolean;
       }
       export interface CreateMemoryTokenStoreParams {}
-      export function CreateTokenStore<T = unknown>(params: T): TokenStore;
+      export function CreateTokenStore<T = unknown>(params?: T): TokenStore;
     }
   }
 }
