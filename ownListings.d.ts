@@ -79,7 +79,7 @@ declare module "sharetribe-flex-sdk" {
       extends DenormalizedResourceObject<NormalizedOwnListing> {}
 
     interface OwnListingBaseQueryParams {
-      "fields.images"?: Array<`variants.${ImageVariants}`>;
+      "fields.image"?: Array<`variants.${ImageVariants}`>;
       "fields.listing"?: string[];
       include?: Array<
         | "marketplace"
