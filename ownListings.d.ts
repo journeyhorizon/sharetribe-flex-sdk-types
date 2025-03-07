@@ -20,6 +20,7 @@ declare module "sharetribe-flex-sdk" {
         }
       | {
           type: "availability-plan/time";
+          timezone: string;
           entries: Array<{
             seats: number;
             dayOfWeek: "mon" | "tue" | "wed" | "thu" | "fri" | "sat" | "sun";
