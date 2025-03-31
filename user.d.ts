@@ -15,6 +15,7 @@ declare module "sharetribe-flex-sdk" {
       banned: boolean;
       deleted: boolean;
       createdAt: Date;
+      state: "active" | "pendingApproval" | "banned";
       profile: {
         displayName: string;
         abbreviatedName: string;
