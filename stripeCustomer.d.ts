@@ -36,6 +36,7 @@ declare module "sharetribe-flex-sdk" {
 
     interface CreateStripeCustomerQueryParams {
       expand?: boolean;
+      include?: Array<"defaultPaymentMethod">;
     }
 
     interface AddPaymentMethodParams {
@@ -43,8 +44,8 @@ declare module "sharetribe-flex-sdk" {
     }
 
     interface AddPaymentMethodQueryParams {
-      stripePaymentMethodId: string;
       expand?: boolean;
+      include?: Array<"defaultPaymentMethod">;
     }
 
     interface DeletePaymentMethodParams {}
