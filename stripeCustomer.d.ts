@@ -52,6 +52,7 @@ declare module "sharetribe-flex-sdk" {
 
     interface DeletePaymentMethodQueryParams {
       expand?: boolean;
+      include?: Array<"defaultPaymentMethod">;
     }
 
     export class stripeCustomer {
