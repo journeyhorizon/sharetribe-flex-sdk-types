@@ -41,7 +41,7 @@ declare module "sharetribe-flex-sdk" {
       upload(
         params: { image: any },
         queryParams?: {
-          expanded?: boolean;
+          expand?: boolean;
           "fields.image"?: Array<`variants.${ImageVariants}`>;
           [key: `imageVariant.${string}`]: string;
         }
