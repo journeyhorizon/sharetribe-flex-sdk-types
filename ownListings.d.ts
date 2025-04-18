@@ -123,6 +123,7 @@ declare module "sharetribe-flex-sdk" {
         | `-pub_${string}`
         | `-meta_${string}`
       >;
+      "limit.images"?: number;
     }
 
     interface CreateListingParams {

@@ -118,6 +118,7 @@ declare module "sharetribe-flex-sdk" {
         | "images"
         | "currentStock"
       >;
+      "limit.images"?: number;
       [key: `imageVariant.${string}`]: string;
     }
 
