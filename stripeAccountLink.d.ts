@@ -22,7 +22,12 @@ declare module "sharetribe-flex-sdk" {
       failureURL: string;
       successURL: string;
       type: string;
-      collect: string;
+      // @deprecated
+      collect?: string;
+      collectionOptions?: {
+        fields: "currently_due" | "eventually_due";
+        future_requirements: "include" | "omit";
+      };
     }
 
     interface CreateStripeAccountLinkQueryParams {
