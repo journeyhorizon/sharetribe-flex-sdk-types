@@ -6,6 +6,7 @@ declare module "sharetribe-flex-sdk" {
       totalPages?: number;
       totalItems: number;
       paginationUnsupported?: boolean;
+      paginationLimit?: number;
     }
 
     export type Included = NormalizedResourceObject[];
