@@ -146,7 +146,7 @@ declare module "sharetribe-flex-sdk" {
       publicData?: Partial<CurrentUserPublicData>;
       protectedData?: Partial<CurrentUserProtectedData>;
       privateData?: Partial<CurrentUserPrivateData>;
-      profileImageId?: Types.UUID;
+      profileImageId?: Types.UUID | string;
     }
 
     interface UpdateProfileQueryParams extends CurrentUserBaseQueryParams {
