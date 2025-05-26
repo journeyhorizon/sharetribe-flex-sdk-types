@@ -142,7 +142,7 @@ declare module "sharetribe-flex-sdk" {
       firstName?: string;
       lastName?: string;
       displayName?: string;
-      bio?: string;
+      bio?: string | null;
       publicData?: Partial<CurrentUserPublicData>;
       protectedData?: Partial<CurrentUserProtectedData>;
       privateData?: Partial<CurrentUserPrivateData>;
