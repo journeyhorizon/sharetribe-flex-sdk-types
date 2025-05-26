@@ -133,6 +133,7 @@ declare module "sharetribe-flex-sdk" {
       "fields.user"?: string[];
       "fields.listing"?: string[];
       [key: `imageVariant.${string}`]: string | undefined;
+      [key: `limit.${string}`]: number;
     }
 
     interface ShowTransactionParams extends TransactionBaseQueryParams {
