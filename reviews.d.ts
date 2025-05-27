@@ -7,6 +7,7 @@ declare module "sharetribe-flex-sdk" {
       type: "ofProvider" | "ofCustomer";
       createdAt: Date;
       deleted: boolean;
+      state: "public" | "pending";
     }
     interface PublicReviewAttributes extends ReviewAttributes {
       content: string;
