@@ -11,10 +11,12 @@ declare module "sharetribe-flex-sdk" {
     interface PublicReviewAttributes extends ReviewAttributes {
       content: string;
       rating: 1 | 2 | 3 | 4 | 5;
+      state: "public";
     }
     interface PendingReviewAttributes extends ReviewAttributes {
       content: null;
       rating: null;
+      state: "pending";
     }
 
     export type ReviewRelationships = {
